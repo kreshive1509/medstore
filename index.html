@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MedZone - Online Medical Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white p-4 shadow-md flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">MedZone</h1>
+    <a href="cart.html" class="text-blue-600 hover:underline">Cart</a>
+  </header>
+
+  <main class="p-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="bg-white p-4 rounded shadow">
+      <img src="images/paracetamol.jpg" alt="Paracetamol" class="w-full h-40 object-contain mb-2">
+      <h2 class="text-lg font-bold">Paracetamol 500mg</h2>
+      <p class="text-gray-600">₹50</p>
+      <button onclick="addToCart('Paracetamol 500mg', 50)" class="mt-2 bg-blue-500 text-white px-3 py-1 rounded">Add to Cart</button>
+      <a href="product.html?name=Paracetamol 500mg&price=50" class="text-blue-600 block mt-2">View Details</a>
+    </div>
+    <!-- Add more product cards here -->
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

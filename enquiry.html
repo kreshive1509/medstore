@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Product Enquiry - MedZone</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white p-4 shadow-md">
+    <h1 class="text-2xl font-bold text-blue-600">Product Enquiry</h1>
+  </header>
+
+  <main class="p-6 max-w-xl mx-auto bg-white shadow rounded">
+    <form>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Product</label>
+        <input type="text" id="productName" class="w-full border rounded p-2 bg-gray-100" readonly>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Your Name</label>
+        <input type="text" class="w-full border rounded p-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Email</label>
+        <input type="email" class="w-full border rounded p-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-1 font-semibold">Message</label>
+        <textarea class="w-full border rounded p-2" required></textarea>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send Enquiry</button>
+    </form>
+  </main>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById("productName").value = urlParams.get("product");
+  </script>
+</body>
+</html>
